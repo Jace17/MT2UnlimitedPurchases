@@ -17,6 +17,6 @@ Install via Thunderstore or manually: copy the mod contents to the 'BepInEx/plug
 
 This is a non-cosmetic mod that changes the game mechanics. Do not use it while playing any online mode as it may cause you to be banned.
 
-# Other Mods
+# Suggested Mods
 
 [More Stones](https://thunderstore.io/c/monster-train-2/p/GravitonGamer/Monster_Train_2_More_Stones/) - Lots of new upgrade items for merchants to sell 
