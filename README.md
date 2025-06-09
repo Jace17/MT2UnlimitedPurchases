@@ -1,4 +1,4 @@
-# MT2UnlimitedPurchases
+# MT2 Unlimited Purchases
 
 A mod for Monster Train 2 that allows unlimited purchases and rerolls at non-artifact merchants.
 
