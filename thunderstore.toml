@@ -6,7 +6,7 @@ namespace = "GravitonGamer"
 name = "MT2UnlimitedPurchases"
 versionNumber = "1.0.1"
 description = "A mod for Monster Train 2 that allows unlimited purchases and rerolls at merchants."
-websiteUrl = "https://thunderstore.io"
+websiteUrl = "https://ko-fi.com/gravitongamer"
 containsNsfwContent = false
 
 [package.dependencies]
