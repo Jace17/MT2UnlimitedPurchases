@@ -4,9 +4,9 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "GravitonGamer"
 name = "MT2UnlimitedPurchases"
-versionNumber = "1.0.1"
+versionNumber = "1.0.2"
 description = "A mod for Monster Train 2 that allows unlimited purchases and rerolls at merchants."
-websiteUrl = "https://ko-fi.com/gravitongamer"
+websiteUrl = "https://github.com/Jace17/MT2UnlimitedPurchases"
 containsNsfwContent = false
 
 [package.dependencies]
