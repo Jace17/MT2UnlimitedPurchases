@@ -4,8 +4,8 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "GravitonGamer"
 name = "MT2UnlimitedPurchases"
-versionNumber = "1.0.0"
-description = "A mod for Monster Train 2 that adds allows unlimited purchases and rerolls at non-artifact merchants."
+versionNumber = "1.0.1"
+description = "A mod for Monster Train 2 that allows unlimited purchases and rerolls at merchants."
 websiteUrl = "https://thunderstore.io"
 containsNsfwContent = false
 
