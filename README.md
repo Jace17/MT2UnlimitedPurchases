@@ -8,6 +8,7 @@ A mod for Monster Train 2 that allows unlimited purchases and rerolls at non-art
 - Allows you to reroll items from a merchant any number of times
 - Does not affect how much gold is spent on items and rerolls
 - Does not affect artifact merchants as they only have a limited number of artifacts available
+- Option for purchases to cost 0 gold can be enabled in the configuration file
 
 # Installation
 
