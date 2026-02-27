@@ -17,22 +17,15 @@ namespace MT2UnlimitedPurchases.Plugin
             // Plugin startup logic
             Logger = base.Logger;
 
-            unlimitedPurchases = Config.Bind("General", "Unlimited Purchases", true, "Purchase an item any number of times.");
-            freePurchases = Config.Bind("General", "Free Purchases", false, "Purchases cost 0 gold.");
+            unlimitedPurchases = Config.Bind("General", "UnlimitedPurchases", true, "Purchase an item any number of times.");
+            freePurchases = Config.Bind("General", "FreePurchases", false, "Purchases cost 0 gold.");
 
             Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
 
             // Uncomment if you need harmony patches, if you are writing your own custom effects.
             var harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
-            if(unlimitedPurchases.Value)
-            {
-                harmony.PatchAll(typeof(UnlimitedPurchases).Assembly);
-            }
-            if (freePurchases.Value)
-            {
-                harmony.PatchAll(typeof(NoPurchaseCost).Assembly);
-            }
-        }      
+            harmony.PatchAll();
+        }
     }
 
     [HarmonyPatch(typeof(MerchantGoodState), "ClaimReward")]
@@ -40,6 +33,10 @@ namespace MT2UnlimitedPurchases.Plugin
     {
         public static void Postfix(MerchantGoodState __instance, ref bool ___claimed, ref int ___remainingUses, int ___totalUses)
         {
+            if (Plugin.unlimitedPurchases == null || !Plugin.unlimitedPurchases.Value)
+            {
+                return; // If the config is not set or disabled, do nothing
+            }
             if (__instance.RewardData != null)
             {
                 if (__instance.RewardData.name == "RerollMerchantRewardDataArtifactOnly"
@@ -58,6 +55,10 @@ namespace MT2UnlimitedPurchases.Plugin
     {
         public static bool Prefix(ref int value, SaveManager __instance)
         {
+            if (Plugin.freePurchases == null || !Plugin.freePurchases.Value)
+            {
+                return true; // If the config is not set or disabled, continue with the original method
+            }
             value = 0; // Set purchase cost to 0
             return true; // Continue with the original method
         }
