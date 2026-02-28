@@ -17,8 +17,8 @@ namespace MT2UnlimitedPurchases.Plugin
             // Plugin startup logic
             Logger = base.Logger;
 
-            unlimitedPurchases = Config.Bind("General", "UnlimitedPurchases", true, "Purchase an item any number of times.");
-            freePurchases = Config.Bind("General", "FreePurchases", false, "Purchases cost 0 gold.");
+            unlimitedPurchases = Config.Bind("General", "UnlimitedPurchases", true, "Purchase an item any number of times.\n商品和服务是否无限购买。");
+            freePurchases = Config.Bind("General", "FreePurchases", false, "Purchases cost 0 gold.\n商品和服务是否免费。");
 
             Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
 
